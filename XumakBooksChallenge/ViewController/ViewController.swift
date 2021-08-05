@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
     
     // MARK:  - UI Properties
     
@@ -60,10 +60,12 @@ class ViewController: UIViewController {
     }
     
     func callBooksService(){
+        self.showProgressView()
         BooksService.listBooks { booksList in
             DispatchQueue.main.async {
                 self.booksList = booksList
                 self.booksCollectionView.reloadData()
+                self.removeProgressView()
             }
         }
     }
