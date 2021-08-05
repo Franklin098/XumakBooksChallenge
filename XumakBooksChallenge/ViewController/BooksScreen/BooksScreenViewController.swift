@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: BaseViewController {
+class BooksScreenViewController: BaseViewController {
     
     // MARK:  - UI Properties
     
@@ -74,13 +74,13 @@ class ViewController: BaseViewController {
 
 // MARK: - BooksCollectionView Protocols
 
-extension ViewController: UICollectionViewDelegate{
+extension BooksScreenViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         booksCollectionView.deselectItem(at: indexPath, animated: true)
     }
 }
 
-extension ViewController: UICollectionViewDataSource{
+extension BooksScreenViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return isFiltering ? self.filteredBooks.count : self.booksList.count
@@ -95,7 +95,7 @@ extension ViewController: UICollectionViewDataSource{
     }
 }
 
-extension ViewController:  UICollectionViewDelegateFlowLayout {
+extension BooksScreenViewController:  UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -120,7 +120,7 @@ extension ViewController:  UICollectionViewDelegateFlowLayout {
 
 // MARK: - SearchBar Protocols
 
-extension ViewController: UISearchResultsUpdating, UISearchBarDelegate{
+extension BooksScreenViewController: UISearchResultsUpdating, UISearchBarDelegate{
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
         filterContent(for: searchBar.text!)

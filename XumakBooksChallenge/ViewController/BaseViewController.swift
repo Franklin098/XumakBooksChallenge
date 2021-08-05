@@ -22,6 +22,8 @@ class BaseViewController: UIViewController{
         self.setupTraslucentNavigationBar()
     }
     
+    // MARK: - Navigation
+    
     func setupTraslucentNavigationBar() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
