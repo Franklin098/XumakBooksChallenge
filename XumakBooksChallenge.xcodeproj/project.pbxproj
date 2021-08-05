@@ -118,7 +118,7 @@
 		6C9F6F6426BC266B008F3722 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6C9F6F6F26BC3013008F3722 /* BooksCell */,
+				6C9F6F6F26BC3013008F3722 /* BookCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,13 +140,13 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		6C9F6F6F26BC3013008F3722 /* BooksCell */ = {
+		6C9F6F6F26BC3013008F3722 /* BookCell */ = {
 			isa = PBXGroup;
 			children = (
 				6C9F6F7026BC302D008F3722 /* BookCell.swift */,
 				6C9F6F7126BC302D008F3722 /* BookCell.xib */,
 			);
-			path = BooksCell;
+			path = BookCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -9,15 +9,21 @@ import UIKit
 
 class BookCell: UICollectionViewCell {
     
+    // MARK: - UI Attributes
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorsNameLabel: UILabel!
     
+    // MARK: - Data Atributes
     static let identifier = "BookCell"
 
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    // MARK: - Helpers
     
     static func nib() -> UINib{
         return UINib(nibName: identifier, bundle: nil)
